@@ -447,7 +447,7 @@
                     <tr>
                       <td class="text-left">Label</td>
                       <td class="text-left">Default Text</td>
-                      <td class="text-left">Font Family</td>
+                      <td class="text-left" style="width: 170px !important;">Font Family</td>
                       <td class="text-left">Font Size</td>
                       <td class="text-left">Opacity</td>
                       <td class="text-left">Font Color</td>
@@ -464,10 +464,20 @@
                       <tr id="custom-row{{ custom_row }}">
                         <td class="text-left"><input type="text" name="product_custom[{{ custom_row }}][label]" value="{{ product_custom.label }}" placeholder="Label" class="form-control"/></td>
                         <td class="text-left"><input onInput="updateLabel(this,'{{custom_row}}')" type="text" name="product_custom[{{ custom_row }}][default_text]" value="{{ product_custom.default_text }}" placeholder="Default Text" class="form-control"/></td>
-                        <td class="text-left"><input type="text" name="product_custom[{{ custom_row }}][family]" value="{{ product_custom.family }}" placeholder="Font Family" class="form-control"/></td>
+                        <td class="text-left">
+                          <select name="product_custom[{{ custom_row }}][family]" id="font[{{ custom_row }}]" class="form-control">
+                            {% for font in fonts %}
+                            {% if font == product_custom.family %}
+                            <option value="{{ font }}" style="font-family: {{ font }}" selected>{{ font }}</option>
+                            {% else %}
+                            <option value="{{ font }}" style="font-family: {{ font }}">{{ font }}</option>
+                            {% endif %}
+                            {% endfor %}
+                          </select>
+                        </td>
                         <td class="text-left"><input type="text" name="product_custom[{{ custom_row }}][size]" value="{{ product_custom.size }}" placeholder="Size" class="form-control"/></td>
                         <td class="text-left"><input type="text" name="product_custom[{{ custom_row }}][opacity]" value="{{ product_custom.opacity }}" placeholder="Opacity" class="form-control"/></td>
-                        <td class="text-left"><input type="text" name="product_custom[{{ custom_row }}][color]" value="{{ product_custom.color }}" placeholder="Color" class="form-control"/></td>
+                        <td class="text-left"><input type="color" name="product_custom[{{ custom_row }}][color]" value="{{ product_custom.color }}" placeholder="Color" class="form-control"/></td>
                         <td class="text-left"><input type="text" name="product_custom[{{ custom_row }}][position_x]" value="{{ product_custom.position_x }}" placeholder="Position X" class="form-control"/></td>
                         <td class="text-left"><input type="text" name="product_custom[{{ custom_row }}][position_y]" value="{{ product_custom.position_y }}" placeholder="Position Y" class="form-control"/></td>
                         <td class="text-left"><input type="text" name="product_custom[{{ custom_row }}][max_length]" value="{{ product_custom.max_length }}" placeholder="Max Length" class="form-control"/></td>
@@ -1740,6 +1750,12 @@
   <script type="text/javascript"><!--
   $('#language a:first').tab('show');
   $('#option a:first').tab('show');
+  //--></script>
+
+  <script type="text/javascript"><!--
+    $('select').on("change",function(){
+      $(this).css('font-family',$(this).val())
+    });
   //--></script>
 </div>
 {{ footer }} 

@@ -1,14 +1,14 @@
 <?php
 // HTTP
-define('HTTP_SERVER', 'http://localhost/iextendlabs-github/oc_custom_product_designer/');
+define('HTTP_SERVER', 'http://localhost/opencart_git/oc_custom_product_designer/');
 
 // HTTPS
-define('HTTPS_SERVER', 'http://localhost/iextendlabs-github/oc_custom_product_designer/');
+define('HTTPS_SERVER', 'http://localhost/opencart_git/oc_custom_product_designer/');
 
 // DIR
-define('DIR_APPLICATION', 'D:/laragon/www/iextendlabs-github/oc_custom_product_designer/catalog/');
-define('DIR_SYSTEM', 'D:/laragon/www/iextendlabs-github/oc_custom_product_designer/system/');
-define('DIR_IMAGE', 'D:/laragon/www/iextendlabs-github/oc_custom_product_designer/image/');
+define('DIR_APPLICATION', 'D:/xampp/htdocs/opencart_git/oc_custom_product_designer/catalog/');
+define('DIR_SYSTEM', 'D:/xampp/htdocs/opencart_git/oc_custom_product_designer/system/');
+define('DIR_IMAGE', 'D:/xampp/htdocs/opencart_git/oc_custom_product_designer/image/');
 define('DIR_STORAGE', DIR_SYSTEM . 'storage/');
 define('DIR_LANGUAGE', DIR_APPLICATION . 'language/');
 define('DIR_TEMPLATE', DIR_APPLICATION . 'view/theme/');
@@ -25,6 +25,6 @@ define('DB_DRIVER', 'mysqli');
 define('DB_HOSTNAME', 'localhost');
 define('DB_USERNAME', 'root');
 define('DB_PASSWORD', '');
-define('DB_DATABASE', 'oc_custom_product_designer');
+define('DB_DATABASE', 'custom_product_designer');
 define('DB_PORT', '3306');
 define('DB_PREFIX', 'oc_');

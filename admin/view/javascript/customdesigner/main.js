@@ -137,7 +137,7 @@ function addCustomFields() {
         html += '  <td class="text-left"><input type="text" name="product_custom[' + custom_row + '][family]" value="arial" placeholder="Font Family" class="form-control" /></td>';
         html += '  <td class="text-left"><input type="text" name="product_custom[' + custom_row + '][size]" value="30" placeholder="Font Size" class="form-control" /></td>';
         html += '  <td class="text-left"><input type="text" name="product_custom[' + custom_row + '][opacity]" value="0.6" placeholder="Opacity" class="form-control" /></td>';
-        html += '  <td class="text-left"><input type="text" name="product_custom[' + custom_row + '][color]" value="black" placeholder="Color" class="form-control" /></td>';
+        html += '  <td class="text-left"><input type="color" name="product_custom[' + custom_row + '][color]" value="black" placeholder="Color" class="form-control" /></td>';
         html += '  <td class="text-left"><input type="text" name="product_custom[' + custom_row + '][position_x]" value="" placeholder="Position X" class="form-control" /></td>';
         html += '  <td class="text-left"><input type="text" name="product_custom[' + custom_row + '][position_y]" value="" placeholder="Position Y" class="form-control" /></td>';
         html += '  <td class="text-left"><input type="text" name="product_custom[' + custom_row + '][max_length]" value="30" placeholder="Max Length" class="form-control" /></td>';
